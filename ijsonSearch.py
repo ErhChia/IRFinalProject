@@ -2,11 +2,11 @@ import ijson
 import sys
 import time
 
-tStart = time.time()#計時開始
+tStart = time.time()
 
-fileName = sys.argv[1] #載入的json檔
-targetCat = sys.argv[2] #有兩種目標類型，t = title，i = id
-target = sys.argv[3] #目標名稱
+fileName = sys.argv[1]
+targetCat = sys.argv[2]
+target = sys.argv[3]
 
 def searchJson(cat , targetName):
 	f = open(fileName)
@@ -26,5 +26,5 @@ if targetCat == 'i':
 elif targetCat == 't':
 	searchJson("title" , target)
 
-tEnd = time.time()#計時結束
-print ("It cost %f sec" % (tEnd - tStart))#會自動做近位
+tEnd = time.time()
+print ("It cost %f sec" % (tEnd - tStart))
